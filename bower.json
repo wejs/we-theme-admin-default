@@ -1,6 +1,7 @@
 {
-  "name": "wejs-theme-admin-default",
+  "name": "we-theme-admin-default",
   "version": "0.0.1",
+  "private": true,
   "authors": [
     "Alberto Souza <alberto.souza.99@gmail.com>"
   ],
@@ -20,7 +21,7 @@
     "ember"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/wejs/wejs-theme-admin-default",
+  "homepage": "https://github.com/wejs/we-theme-admin-default",
   "ignore": [
     "node_modules",
     "bower_components",
