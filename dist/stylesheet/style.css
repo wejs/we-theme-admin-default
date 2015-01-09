@@ -8906,3 +8906,10 @@ table.dataTable thead .sorting:after {
 /**
  * Footer css ...
  */
+/**
+ * WeUserSearchComponent css ...
+ */
+/* example */
+.weUserSearch {
+  width: 50%;
+}
