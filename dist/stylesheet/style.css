@@ -8912,4 +8912,6 @@ table.dataTable thead .sorting:after {
   height: 250px;
   background-color: burlywood;
   border: 5px beige solid;
+  padding: 20px 10px;
 }
+
