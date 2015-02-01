@@ -8907,11 +8907,18 @@ table.dataTable thead .sorting:after {
  * Footer css ...
  */
 
-
 .widget-content-example {
   height: 250px;
   background-color: burlywood;
   border: 5px beige solid;
   padding: 20px 10px;
+}
+
+/**
+ * WeUserSearchComponent css ...
+ */
+/* example */
+.weUserSearch {
+  width: 50%;
 }
 
