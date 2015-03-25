@@ -9075,3 +9075,11 @@ table.dataTable thead .sorting:after {
   float: right;  
 }
 
+/**
+ * Tooltip css
+ */
+div.tooltip-inner {
+    max-width: none;
+}
+
+
