@@ -7,9 +7,8 @@ module.exports = {
   configs: {
     //sails.js views config
     views: {
-      path: 'templates/sails',
-      layout: 'templates/sails/layouts/default.ejs',
-      filesToInjectCssJs: 'templates/sails/**/*.ejs',
+      path: 'templates/server',
+      layout: 'templates/server/layout.hbs'
     },
 
     emailTemplates: {
@@ -18,12 +17,9 @@ module.exports = {
     emberTemplates: {
       path: 'templates/ember',
     },
-
-    assetsFolderToCopy: 'dist/**/*',
-
     // one theme javascript file
-    javascript: 'dist/javascript/script.js',
+    javascript: 'files/public/javascript/script.js',
     // one css file
-    stylesheet: 'dist/stylesheet/style.css'
+    stylesheet: 'files/public/stylesheet/style.css'
   }
 };
