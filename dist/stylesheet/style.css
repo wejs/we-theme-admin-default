@@ -9083,3 +9083,37 @@ div.tooltip-inner {
 }
 
 
+/**
+ * Fix pagination bar
+ */
+.curadoria-pagination ul > .arrow {
+  float: none;
+}
+
+/**
+ * Truncate text in table
+ */
+.curadoria-table {
+  table-layout:fixed;
+}
+
+.curadoria-table td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.curadoria-table td span{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*.curadoria-tablel-hd-clickable{
+  cursor: pointer;
+}
+
+.curadoria-tablel-hd-unclickable{
+  cursor: no-drop;
+}*/
+
