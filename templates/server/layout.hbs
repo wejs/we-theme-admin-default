@@ -1,30 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>{{title}}</title>
+<div id="page-wrapper" style="min-height: 160px;">
+  {{#region 'sidebar' class="col col-md-12"}}{{/region}}
 
-    {{{render-metadata-tags}}}
-
-    <!-- Viewport mobile tag for sensible mobile support -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <!--[if lt IE 9]>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <![endif]-->
-
-    <meta name="csrf-token" content="<%= _csrf %>" />
-
-    {{{render-stylesheet-tags}}}
-
-    {{{render-bootstrap-config}}}
-  </head>
-  <body>
-    <noscript>
-      {{{body}}}
-    </noscript>
-
-    {{{render-javascript-tags}}}
-
-    <!-- Load ember.js models -->
-    <script type="text/javascript" src="/api/v1/models/emberjs"></script>
-  </body>
-</html>
+  {{{body}}}
+</div>

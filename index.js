@@ -1,25 +1,32 @@
 /**
- * Default We.js theme
+ * Default We.js admin theme
  */
 
 module.exports = {
   // theme config
   configs: {
-    //sails.js views config
-    views: {
-      path: 'templates/server',
-      layout: 'templates/server/layout.hbs'
-    },
-
     emailTemplates: {
       path: 'templates/email',
-    },
-    emberTemplates: {
-      path: 'templates/ember',
     },
     // one theme javascript file
     javascript: 'files/public/javascript/script.js',
     // one css file
     stylesheet: 'files/public/stylesheet/style.css'
-  }
+  },
+
+  autoLoadAllTemplates: true,
+  // will be auto loaded
+  templates: {},
+  // set layouts here
+  layouts: {
+    'default': {
+      template: __dirname + '/templates/server/layout.hbs',
+      regions: {
+        sidebar: {
+          name: 'Sidebar'
+        }
+      }
+    }
+  },
+  widgets: {}
 };
