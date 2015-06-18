@@ -1,8 +1,21 @@
 <div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Layout - {{data.layout}}</h1>
-    </div>
-    <!-- /.col-lg-12 -->
+  <div class="col-lg-12">
+    <ol class="ember-view breadcrumbs breadcrumb">
+      <li class="first current">
+        {{#link-to 'admin.index' }}home{{/link-to}}
+      </li>
+      <li class="first current">
+        {{#link-to 'theme.themesList' theme}}themes{{/link-to}}
+      </li>
+      <li class="first current">
+        {{#link-to 'theme.themeSettings' theme}}{{theme}}{{/link-to}}
+      </li>
+    </ol>
+  </div>
+  <div class="col-lg-12">
+    <h1 class="page-header">Layout - {{data.layout}}</h1>
+  </div>
+  <!-- /.col-lg-12 -->
 </div>
 {{#each data.regions}}
   <div class="panel panel-default">

@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-lg-12">
+    <ol class="ember-view breadcrumbs breadcrumb">
+      <li class="first current">
+        {{#link-to 'admin.index' }}home{{/link-to}}
+      </li>
+    </ol>
+  </div>
+    <div class="col-lg-12">
+        <h1 class="page-header">Themes</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+
+    <div class="col-lg-12">
+      <ul class="nav nav-pills">
+        {{#each themes}}
+          <li role="presentation">
+            {{#link-to 'theme.themeSettings' projectThemeName}}{{projectThemeName}} <small>@{{name}}</small>{{/link-to}}
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+</div>
