@@ -33,7 +33,7 @@
         </thead>
         <tbody class="ui-sortable">
           {{#each widgets}}
-            <tr model-widget="{{id}}" class="ui-state-default ui-sortable-handle" data-id="{{id}}" data-weight="{{weight}}">
+            <tr model-widget="{{id}}" class="ui-state-default ui-sortable-handle" model-id="{{id}}" data-weight="{{weight}}">
               <td style="width: 30px; cursor: move;"><span class="glyphicon glyphicon-resize-vertical"></span></td>
               <td><bind model-widget-{{id}}="id">{{id}}</bind></td>
               <td><bind model-widget-{{id}}="title">{{title}}</bind></td>
@@ -107,34 +107,6 @@
 
 <script type="text/javascript">
   $(function() {
-    var sortableList = $('.sorted_table > tbody');
-    // Sortable rows
-    sortableList.sortable({
-      update: function( event, ui ) {
-        saveOrder(this)
-      }
-    });
-    function saveOrder(tbody) {
-      var widgets = [];
-      var list = $(tbody).children('tr');
-
-      for (var i = 0; i < list.length; i++) {
-        widgets.push({
-          id: $(list[i]).attr('model-id'), weight: i
-        });
-
-        $(list[i]).attr('data-weight', i);
-      }
-
-      $.ajax({
-        url: '/api/v1/widget-sort?responseType=json',
-        method: 'POST',
-        dataType: 'json',
-        contentType: "application/json; charset=utf-8",
-        data: JSON.stringify({ widgets: widgets })
-      }).done(function(r) {
-        console.log('Done sort widgets', r);
-      });
-    }
+    we.admin.layouts.widgetTableSorter('.sorted_table > tbody');
   });
 </script>
