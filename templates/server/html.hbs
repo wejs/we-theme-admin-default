@@ -12,6 +12,7 @@
 
     <script type="text/javascript" src="/public/project/client/bower_components/jquery/dist/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/public/plugin/we-core/client/shared/libs/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="/public/plugin/we-core/client/shared/libs/dataTables/jquery.dataTables.css">
 
     {{{render-stylesheet-tags}}}
   </head>
@@ -20,34 +21,33 @@
 
       <!-- Navigation -->
       <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-              {{#link-to 'admin.index' class="navbar-brand"}}{{appName}}{{/link-to}}
-          </div>
-          <!-- /.navbar-header -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          {{#link-to 'main.index' class="navbar-brand"}}{{appName}}{{/link-to}}
+        </div>
+        <!-- /.navbar-header -->
 
-          <ul class="nav navbar-top-links navbar-right">
-              {{{template 'user/usermenu'}}}
-          </ul>
-          <!-- /.navbar-top-links -->
+        <ul class="nav navbar-top-links navbar-right">
+          {{{template 'user/usermenu'}}}
+        </ul>
+        <!-- /.navbar-top-links -->
 
-          <div class="navbar-default sidebar" role="navigation">
-              <div class="sidebar-nav navbar-collapse">
-                {{we-menu 'admin' id="side-menu"}}
-              </div>
-              <!-- /.sidebar-collapse -->
+        <div class="navbar-default sidebar" role="navigation">
+          <div class="sidebar-nav navbar-collapse">
+            {{we-menu 'admin' id="side-menu"}}
           </div>
-          <!-- /.navbar-static-side -->
+          <!-- /.sidebar-collapse -->
+        </div>
+        <!-- /.navbar-static-side -->
       </nav>
 
       {{{layoutHtml}}}
     </div>
-
 
     <div id="we-element-features">
       <div id="updateWidgetFormModal" class="modal" aria-hidden="true">
@@ -66,6 +66,7 @@
     {{{render-bootstrap-config}}}
 
     <script type="text/javascript" src="/public/plugin/we-core/client/shared/libs/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/public/plugin/we-core/client/shared/libs/dataTables/jquery.dataTables.min.js"></script>
     <script src="/public/project/client/bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script type="text/javascript" src="/public/project/client/bower_components/page/page.js"></script>
     <script type="text/javascript" src="/public/plugin/we-core/files/javascript/we.js"></script>
