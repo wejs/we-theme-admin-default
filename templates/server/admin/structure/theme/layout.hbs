@@ -69,7 +69,7 @@
             <tr>
               <td>{{type}}</td>
               <td>
-                <form id="form-add-region-to-{{@key}}" name="layout-widget-selector" class="form-inline">
+                <form id="form-add-region-to-{{@key}}" name="layout-widget-selector" onsubmit="return we.structure.openWidgetForm(event);" class="form-inline">
                   <span>Add in regions:</span>
                   <input type="hidden" name="type" value="{{type}}" />
                   <input type="hidden" name="theme" value="{{../data.themeName}}" />
@@ -87,20 +87,6 @@
           {{/each}}
         </tbody>
       </table>
-    </div>
-  </div>
-</div>
-
-<div id="AddWidgetFormModal" class="modal" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h4 class="modal-title">Add widget</h4>
-      </div>
-      <div class="modal-body">
-        <p>Loading ...</p>
-      </div>
     </div>
   </div>
 </div>
