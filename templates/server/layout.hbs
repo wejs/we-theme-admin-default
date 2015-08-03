@@ -1,5 +1,19 @@
 <div id="page-wrapper" style="min-height: 160px;">
-  {{#region 'sidebar' class="col col-md-12"}}{{/region}}
+  <div class="row">
+    <div class="col-lg-12">
+      <ol class="ember-view breadcrumbs breadcrumb">
+        <li class="first current">
+          {{#link-to 'admin.index' }}{{t 'home'}}{{/link-to}}
+        </li>
+      </ol>
 
-  {{{body}}}
+      {{#unless skipLayoutTitle}}{{#if title}}
+        <h1 class="page-header">{{title}}</h1>
+      {{/if}}{{/unless}}
+
+      <div id="sysMessagesArea">{{{we-messages}}}</div>
+
+      {{{body}}}
+    </div>
+  </div>
 </div>
