@@ -14,8 +14,6 @@
   </head>
   <body>
     <div id="wrapper">
-
-      <!-- Navigation -->
       <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -24,27 +22,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          {{#link-to 'main.index' class="navbar-brand"}}{{appName}}{{/link-to}}
+          {{#link-to 'main.index' class="navbar-brand"}}
+            {{appName}}
+          {{/link-to}}
         </div>
-        <!-- /.navbar-header -->
-
-        <ul class="nav navbar-top-links navbar-right">
-          {{{template 'user/usermenu'}}}
-        </ul>
-        <!-- /.navbar-top-links -->
-
+        {{we-menu userMenu}}
         <div class="navbar-default sidebar" role="navigation">
           <div class="sidebar-nav navbar-collapse">
-            {{we-menu 'admin' id="side-menu"}}
+            {{we-menu adminMenu id="side-menu"}}
           </div>
-          <!-- /.sidebar-collapse -->
         </div>
-        <!-- /.navbar-static-side -->
       </nav>
-
       {{{layoutHtml}}}
     </div>
-
     {{{render-bootstrap-config}}}
     {{{render-javascript-tags 'footer'}}}
   </body>
