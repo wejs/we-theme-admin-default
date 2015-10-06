@@ -1,6 +1,6 @@
 
 <div>
-{{#link-to 'auth.newPassword' record.id class="btn btn-default" }}
+{{#link-to 'auth.newPassword' data.id class="btn btn-default" }}
   {{t 'auth.new-password'}}
 {{/link-to}}
 </div>
@@ -8,7 +8,7 @@
 
 <table class="table table-striped table-hover">
   <tbody>
-    {{#each record.dataValues }}
+    {{#each data.dataValues }}
       <tr>
         <th>{{@key}}</th>
         <td>{{this}}</td>
@@ -17,8 +17,8 @@
   </tbody>
   <tfoot>
     <td colspan="2">
-      {{we-action-edit-btn resourceName record req record.id}}
-      {{we-action-delete-btn resourceName record req record.id}}
+      {{we-action-edit-btn resourceName data req data.id}}
+      {{we-action-delete-btn resourceName data req data.id}}
     </td>
   </tfoot>
 </table>
