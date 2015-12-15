@@ -18,16 +18,16 @@
         {{#each roles}}<th>{{name}}</th>{{/each}}</tr>
       </thead>
       <tbody>
-      {{#each permissions}}
+      {{#each permissions as |permission|}}
         <tr><td>{{name}}</td>
-        {{#each ../roles}}<td>
-          {{#ifCond name 'administrator'}}
+        {{#each ../roles as |role|}}<td>
+          {{#ifCond role.name 'administrator'}}
             <input checked type="checkbox" disabled="disabled">
           {{else}}
-            {{#we-contains permissions ../../name}}
-              <input checked type="checkbox" role-name="{{name}}" role-id="{{id}}" permission-name="{{../../../name}}" title="{{name}}">
+            {{#we-contains permissions permission.name}}
+              <input checked type="checkbox" role-name="{{role.name}}" role-id="{{role.id}}" permission-name="{{permission.name}}" title="{{role.name}}">
             {{else}}
-              <input type="checkbox" role-name="{{name}}" permission-name="{{../../../name}}" role-id="{{id}}" title="{{name}}">
+              <input type="checkbox" role-name="{{role.name}}" permission-name="{{permission.name}}" role-id="{{role.id}}" title="{{role.name}}">
             {{/we-contains}}
           {{/ifCond}}
         </td>{{/each}}</tr>
