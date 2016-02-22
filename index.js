@@ -9,9 +9,9 @@ module.exports = {
       path: 'templates/email',
     },
     // one theme javascript file
-    javascript: 'files/public/javascript/script.js',
+    javascript: 'files/public/script.js',
     // one css file
-    stylesheet: 'files/public/stylesheet/style.css'
+    stylesheet: 'files/public/style.css'
   },
 
   autoLoadAllTemplates: true,

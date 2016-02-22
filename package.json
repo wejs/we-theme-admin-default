@@ -9,15 +9,14 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "grunt": "~0.4.4",
-    "grunt-bump": "0.3.1",
-    "grunt-contrib-connect": "^0.10.1",
-    "grunt-contrib-copy": "^0.8.0",
-    "grunt-contrib-jshint": "^0.11.2",
-    "grunt-contrib-less": "^1.0.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-link-html": "^0.1.2",
-    "grunt-sync": "0.2.3"
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.0.3",
+    "gulp-minify-css": "^1.2.1",
+    "we-core": "^0.3",
+    "we-plugin-bootstrap3": "^0.3.2",
+    "we-plugin-form": "^0.3.27",
+    "we-plugin-menu": "^0.3.11"
   },
   "optionalDependencies": {},
   "engines": {

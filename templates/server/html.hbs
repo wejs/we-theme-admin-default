@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{locale}}">
   <head>
-    <title>{{title}}</title>
-
+    <title>{{title}} | {{req.we.config.appName}}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     {{#if _csrf}}<meta name="csrf-token" content="{{_csrf}}" />{{/if}}
@@ -11,29 +10,13 @@
     {{{render-javascript-tags 'header'}}}
   </head>
   <body>
+    {{we-event event="we-html-body-start"}}
     <div id="wrapper">
-      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          {{#link-to 'main.index' class="navbar-brand"}}
-            {{appName}}
-          {{/link-to}}
-        </div>
-        {{we-menu userMenu}}
-        <div class="navbar-default sidebar" role="navigation">
-          <div class="sidebar-nav navbar-collapse">
-            {{we-menu adminMenu id="side-menu"}}
-          </div>
-        </div>
-      </nav>
+      {{{template 'partials/header'}}}
       {{{layoutHtml}}}
     </div>
     {{{render-bootstrap-config}}}
     {{{render-javascript-tags 'footer'}}}
+    {{we-event event="we-html-body-end"}}
   </body>
 </html>
